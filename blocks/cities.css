@@ -1,0 +1,11 @@
+.cities {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.city {
+  max-width: 984px;
+}
+.city__description {
+  max-width: 484px;
+}
