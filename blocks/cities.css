@@ -1,13 +1,12 @@
 .cities {
   max-width: 987px;
-  margin: 92px auto 90px;
+  margin: 0 auto 90px;
   font-family: "Inter";
   font-weight: 400;
   color: #ffffff;
   justify-content: center;
 }
 .city {
-  max-width: 984px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
@@ -36,16 +35,23 @@
   font-size: 12px;
   line-height: 14.5px;
   color: #aaaaaa;
+  margin-top: 0;
+  margin-bottom: 8px;
 }
-.city__artist-name {
+.city__artists-name {
   font-size: 18px;
   line-height: 22px;
+  margin: 0;
 }
 .city__image {
   width: 460px;
   height: 460px;
   grid-area: city-image;
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+  cursor: url(../images/cursor-v.svg), auto;
+}
+.city__image:hover {
+  opacity: 0.5;
 }
 .city__text {
   grid-area: city-text;
@@ -65,6 +71,10 @@
   color: #ffffff;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
   border: none;
+  cursor: url(../images/cursor.svg), auto;
+}
+.city__button:hover {
+  opacity: 0.25;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
   .cities {
@@ -72,6 +82,7 @@
   }
   .city {
     column-gap: 28px;
+    row-gap: 48px;
   }
   .city__title {
     font-size: 42px;
@@ -89,10 +100,11 @@
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .cities {
     max-width: 320px;
+    margin: 0 auto 65px;
   }
   .city {
-    max-width: 288px;
-    column-gap: 28px;
+    margin: 0 auto 50px;
+    row-gap: 30px;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas:
@@ -104,20 +116,34 @@
       "city-button";
   }
   .city__title {
+    width: 288px;
     font-size: 32px;
     line-height: 35px;
+    margin: 0 auto;
+  }
+  .city__artists {
+    width: 288px;
+    margin: 0 auto;
   }
   .city__image {
     width: 320px;
     height: 320px;
     box-shadow: none;
   }
+  .city__text {
+    width: 288px;
+    margin: 0 auto;
+  }
   .city__description {
-    max-width: 288px;
+    width: 288px;
     font-size: 16px;
     line-height: 26px;
   }
+  .city__description:nth-last-of-type(1) {
+    margin-bottom: 0;
+  }
   .city__button {
-    justify-content: center;
+    width: 288px;
+    margin: 0 auto;
   }
 }
